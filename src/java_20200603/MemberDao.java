@@ -10,15 +10,20 @@ import java.util.ArrayList;
 //Member 테이블을 접근하기 위한 클래스
 //DAO : Data Access Object
 public class MemberDao {
-	public int insert(MemberDto m) {
-		int resultCount = 0;
-		
+	
+	public MemberDao() {//생성자를 만들어서 공통으로 쓰이는 것을 한쪽으로 모으기
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	
+	
+	public int insert(MemberDto m) {
+		int resultCount = 0;
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -66,13 +71,6 @@ public class MemberDao {
 	
 	public int update(MemberDto m) {
 		int resultCount = 0;
-		
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -124,13 +122,6 @@ public class MemberDao {
 	public int delete(int num) {
 		int resultCount = 0;
 		
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		
@@ -173,13 +164,6 @@ public class MemberDao {
 	public ArrayList<MemberDto> select() {
 		
 		ArrayList<MemberDto> list = new ArrayList<MemberDto>();
-		
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -227,14 +211,6 @@ public class MemberDao {
 	
 	public MemberDto select(int num) {
 		MemberDto mdto = null;
-		
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
