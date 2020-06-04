@@ -12,7 +12,7 @@ public class EmpDao {
 	//	1) 생성자의 접근한정자를 private으로 설정한다.
 	//	2) 해당 클래스의 객체를 생성할 수 있는 변수를 static으로 선언한다.
 	//	3) 해당 클래스의 객체를 생성할 수 있는 메서드를 static으로 만든다.
-	//
+	//  4)
 	private static EmpDao dao;
 	
 	public static EmpDao getInstance() {
