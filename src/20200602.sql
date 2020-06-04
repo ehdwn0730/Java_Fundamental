@@ -226,4 +226,12 @@ UPDATE member
 SET NAME = '샤넬1', addr = '프랑스1'
 WHERE num = 9;
 
-SELECT * FROM member;
+SELECT num, NAME, addr
+FROM member
+order BY num DESC;
+
+
+
+SELECT num, NAME, addr
+FROM member
+WHERE num = 1;
